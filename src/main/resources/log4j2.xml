@@ -1,0 +1,17 @@
+<Configuration status="WARN">
+ <Appenders>
+  <Console name="ConsoleAppender" target="SYSTEM_OUT">
+   <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c:%L - %m%n" />
+  </Console>
+ </Appenders>
+
+ <Loggers>
+  <Root level="INFO">
+   <AppenderRef ref="ConsoleAppender"/>
+  </Root>
+  <Logger name="software.amazon.awssdk" level="WARN" />
+  <Logger name="software.amazon.awssdk.request" level="WARN" />
+  <Logger name="org.apache.http.wire" level="WARN" />
+  <Logger name="com.axteroid" level="${env:AXTEROID_LOG_LEVEL:-DEBUG}" />
+ </Loggers>
+</Configuration>

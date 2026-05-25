@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+
+    <!-- Sin parche de Microsoft disponible al 15-may-2026. Revisar 15-jun-2026. -->
+    <suppress until="2026-06-15Z">
+        <notes>CVE-2026-33117: sin parche disponible. Viene de axt-sdk (no modificable).</notes>
+        <cve>CVE-2026-33117</cve>
+    </suppress>
+
+    <!-- azure-identity: pendiente actualización de axt-sdk -->
+    <suppress until="2026-06-15Z">
+        <notes>CVE-2023-36415: pendiente actualización de axt-sdk.</notes>
+        <cve>CVE-2023-36415</cve>
+    </suppress>
+
+    <!-- netty-codec-protobuf 4.2.10: CVE-2026-41417 puede ser falso positivo
+         (el CPE lo confunde con protobuf). Verificar en próxima revisión. -->
+    <suppress until="2026-06-15Z">
+        <notes>CVE-2026-41417: posible falso positivo en netty-codec-protobuf. Verificar.</notes>
+        <cve>CVE-2026-41417</cve>
+    </suppress>
+
+</suppressions>
